@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>Flag Search</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://kit.fontawesome.com/4835576d8b.js" crossorigin="anonymous"></script>
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header>
+      <h1>Where in the world?</h1>
+    </header>
+
+    <!-- Article search -->
+    <article>
+      <div class="container__search">
+        <div class="card__search">
+          <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <input type="text" name="search" id="search" placeholder="Search for a country" />
+        </div>
+        <select name="filter" id="filterByRegion">
+          <option value="0">Filter by región</option>
+          <option value="africa">África</option>
+          <option value="americas">Ámerica</option>
+          <option value="asia">Asia</option>
+          <option value="europe">Europa</option>
+          <option value="oceania">Oceania</option>
+        </select>
+      </div>
+    </article>
+
+    <!-- Main -->
+    <main>
+      <div id="container__flags"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- Add your site or application content here -->
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

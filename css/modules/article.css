@@ -1,0 +1,34 @@
+/* Article styles */ 
+
+.container__search{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+article{
+    width: 90%;
+    margin: auto;
+}
+
+.card__search input{
+    width: 80%;
+
+}
+
+input, select{
+    height: 30px;
+}
+
+.card__search{
+    position: relative;
+}
+#searchBtn{
+    position:absolute;
+    display: block;
+    height: 100%;
+}
+
+#search{
+    padding-left: 35px;
+}
