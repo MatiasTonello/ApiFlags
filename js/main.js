@@ -14,7 +14,7 @@ const loadFlags = async () => {
 
     if (response.status === 200) {
       const data = await response.json()
-
+      console.log(data);
       let flags = ''
       for (let i = 0; i < data.length; i++) {
         flags += `
@@ -51,7 +51,7 @@ btnSearch.addEventListener('click', async () => {
 
     if (response.status === 200) {
       const data = await response.json()
-      const flagFound = data.find((element) => element.name.common === flagToSearch)
+      const flagFound = data.find((element) => element.name.common === flagToSearch);
       
       document.getElementById('container__flags').innerHTML = ''
       if (flagFound === undefined) {
@@ -75,11 +75,11 @@ filterByRegion.addEventListener('change', async () => {
     const response = await fetch(`https://restcountries.com/v3.1/region/${currentOption}`)
     if (response.status === 200) {
       const data = await response.json()
-      createFlagByContinent(data)
+      createFlagByContinent(data);
     }
   } catch (error) {
     console.log(error)
   }
 })
 
-loadFlags()
+loadFlags();
