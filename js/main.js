@@ -1,6 +1,7 @@
 /* Import methods */
 
 import { createFlag, createFlagByContinent } from './createFlag.js'
+import { capitalizeFirstLetter } from './capitalize.js'
 
 /* Id's const */
 const btnSearch = document.getElementById('searchBtn')
@@ -43,23 +44,21 @@ const loadFlags = async () => {
 }
 
 btnSearch.addEventListener('click', async () => {
-  const flagToSearch = inputSearch.value
-  console.log(flagToSearch)
+  let flagToSearch = inputSearch.value;
+  flagToSearch = capitalizeFirstLetter(flagToSearch);
   try {
     const response = await fetch('https://restcountries.com/v3.1/all')
-    console.log(response)
+
     if (response.status === 200) {
       const data = await response.json()
-
-      let flag = ''
       const flagFound = data.find((element) => element.name.common === flagToSearch)
-      console.log(flagFound)
+      
       document.getElementById('container__flags').innerHTML = ''
       if (flagFound === undefined) {
         document.getElementById('container__flags').innerHTML =
           '<div class="notExist"> <h2> Country does not exist! Verify the desired name </h2> </div> '
       } else {
-        createFlag(flagFound)
+        createFlag(flagFound);
       }
     }
   } catch (error) {
