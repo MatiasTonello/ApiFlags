@@ -74,10 +74,8 @@ filterByRegion.addEventListener('change', async () => {
   }
   try {
     const response = await fetch(`https://restcountries.com/v3.1/region/${currentOption}`)
-    console.log(response)
     if (response.status === 200) {
       const data = await response.json()
-      console.log(data)
       createFlagByContinent(data)
     }
   } catch (error) {

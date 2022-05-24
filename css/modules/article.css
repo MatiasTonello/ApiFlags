@@ -23,6 +23,7 @@ input, select{
 .card__search{
     position: relative;
 }
+
 #searchBtn{
     position:absolute;
     display: block;
@@ -31,4 +32,24 @@ input, select{
 
 #search{
     padding-left: 35px;
+}
+
+
+@media only screen and (max-width: 575px){
+    .container__search{
+        flex-direction: column;
+        width: 70%;
+       
+    }
+
+    .card__search input{
+        width: 80%;
+        margin-bottom: 25px;
+    }
+
+    #searchBtn{
+        position:absolute;
+        display: block;
+        max-height: 35px;
+    }
 }

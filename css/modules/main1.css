@@ -58,3 +58,14 @@ main {
     padding: 20px;
 
 }
+
+@media only screen and (max-width: 575px){
+    #container__flags{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .card__flag{
+        width: 100%;
+    }
+}
