@@ -14,23 +14,10 @@ const loadFlags = async () => {
 
     if (response.status === 200) {
       const data = await response.json()
-      console.log(data);
-      let flags = ''
       for (let i = 0; i < data.length; i++) {
-        flags += `
-			    <div class="card__flag">
-                <img class="card__flag_img" src="${data[i].flags.png}">   </img>
-                <h3 class="card__flag_h3"> 
-                ${data[i].name.common}</h3>
-				<ul class="card__flag_ul">
-                    <li>  Population : ${data[i].population} </li>
-                    <li>  Region : ${data[i].region}</li>
-                    <li>  Capital : ${data[i].capital}</li>
-                </ul>
-				</div>`
+        createFlagByContinent(data);
       }
 
-      document.getElementById('container__flags').innerHTML = flags
     } else if (respuesta.status === 401) {
       console.log('wrong key')
     } else if (respuesta.status === 404) {

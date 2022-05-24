@@ -17,7 +17,6 @@ export function createFlag(pais) {
 
 export function createFlagByContinent(continent) {
   let flags = ''
-
   for (let i = 0; i < continent.length; i++) {
     flags += createFlag(continent[i]);
   }
