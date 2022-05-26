@@ -24,11 +24,3 @@ export function createFlagByContinent(continent) {
 }
 
 
-export const getAllFlags = async (event) => {
-  const value = event.target.value;
-  const result = await fetch(`https://restcountries.com/v3.1/name/${value}`);
-  const results  = await result.json();
-  console.log(results);
-  createFlagByContinent(results);
-  return results;
-}
