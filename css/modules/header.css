@@ -1,7 +1,35 @@
 /* Header styles */
 
-header{
+header {
     width: 90%;
     margin: auto;
+
 }
 
+header h1 {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+span {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 19ch;
+    animation: typing 5s infinite steps(19), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyFrames typing {
+
+    from {
+        width: 0
+    }
+}
+
+@keyFrames blink {
+    50% {
+        border-color: transparent
+    }
+}

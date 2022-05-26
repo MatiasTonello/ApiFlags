@@ -4,8 +4,8 @@ import { createFlag, createFlagByContinent } from './createFlag.js'
 import { capitalizeFirstLetter } from './capitalize.js'
 
 /* Id's const */
-const btnSearch = document.querySelector('#btnSearch')
-const inputSearch = document.querySelector('#search')
+const btnSearch = document.querySelector('#btnSearch');
+const inputSearch = document.querySelector('#search');
 const filterByRegion = document.querySelector('#filterByRegion');
 
 const loadFlags = async () => {
