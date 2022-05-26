@@ -12,13 +12,23 @@ export function createFlag(pais) {
       <li>  Capital : ${pais.capital}</li>
       </ul>
       </div>`
-   return document.getElementById('container__flags').innerHTML = flag;
+  return (document.getElementById('container__flags').innerHTML = flag);
 }
 
 export function createFlagByContinent(continent) {
   let flags = ''
   for (let i = 0; i < continent.length; i++) {
-    flags += createFlag(continent[i]);
+    flags += createFlag(continent[i])
   }
   document.getElementById('container__flags').innerHTML = flags;
+}
+
+
+export const getAllFlags = async (event) => {
+  const value = event.target.value;
+  const result = await fetch(`https://restcountries.com/v3.1/name/${value}`);
+  const results  = await result.json();
+  console.log(results);
+  createFlagByContinent(results);
+  return results;
 }
