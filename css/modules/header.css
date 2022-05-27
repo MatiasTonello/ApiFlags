@@ -2,10 +2,6 @@
 
 header {
   margin: auto;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -37,11 +33,5 @@ span {
 @keyframes blink {
   50% {
     border-color: transparent;
-  }
-}
-
-@media only screen and (max-width: 575px) {
-  header img {
-    display: none;
   }
 }

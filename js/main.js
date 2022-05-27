@@ -4,7 +4,7 @@ import { createFlag, createFlagByContinent } from './createFlag.js'
 import { capitalizeFirstLetter } from './capitalize.js'
 
 /* Id's const */
-const btnSearch = document.querySelector('#btnSearch')
+
 const inputSearch = document.querySelector('#search')
 const filterByRegion = document.querySelector('#filterByRegion')
 
@@ -45,6 +45,7 @@ const debouncedFetch = (value) => {
 
 const getAllFlags = async (event) => {
   const value = event.target.value
+
   const result = await fetch(`https://restcountries.com/v3.1/name/${value}`)
   const results = await result.json()
   if (inputSearch.value === '') {
