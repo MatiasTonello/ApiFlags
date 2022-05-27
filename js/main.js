@@ -2,6 +2,8 @@
 
 import { createFlag, createFlagByContinent } from './createFlag.js'
 import { capitalizeFirstLetter } from './capitalize.js'
+console.log("a ver si funca esto")
+
 
 /* Id's const */
 const btnSearch = document.querySelector('#btnSearch')
