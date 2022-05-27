@@ -2,8 +2,6 @@
 
 import { createFlag, createFlagByContinent } from './createFlag.js'
 import { capitalizeFirstLetter } from './capitalize.js'
-console.log("a ver si funca esto")
-
 
 /* Id's const */
 const btnSearch = document.querySelector('#btnSearch')
@@ -16,7 +14,6 @@ const loadFlags = async () => {
 
     if (response.status === 200) {
       const data = await response.json()
-      console.log(data)
       createFlagByContinent(data)
     }
   } catch (error) {
